@@ -1,0 +1,320 @@
+/* --------------------- */
+/* ------ General ------ */
+/* --------------------- */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+/* -------------------- */
+/* ------ header ------ */
+/* -------------------- */
+
+
+.navbar {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 10px 0px;
+}
+
+
+/* ------ navbar-left ------ */
+
+
+.logo {
+    height: 28px;
+}
+
+
+/* ------ navbar-right ------ */
+
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 2;
+    gap: 1.5rem;
+}
+
+.nav-links {
+    display: none;
+}
+
+.menu-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.icon-image {
+    display: block;
+    height: 32px;
+    width: 32px;
+    margin: auto;
+}
+
+
+/* ------------------------------- */
+/* ------ navigation screen ------ */
+/* ------------------------------- */
+
+@media (max-width: 767px) {
+    .navbar-right {
+        position: fixed;
+        top: 0;
+        right: -100vw;
+        width: 100vw;
+        height: 100vh;
+        background-color: #f8f9fa;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        transition: right 0.5s ease;
+        z-index: 100;
+        padding: 0 10%;
+    }
+
+    .navbar-right.active {
+        right: 0;
+    }
+
+    .navbar-right .nav-links {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .navbar-right .btn-login {
+        width: 100%;
+        background-color: #fa6800;
+        color: white;
+        padding: 16px 24px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar-right .btn-login:hover {
+        background-color: #e05b00;
+    }
+
+    .navbar-right .nav-link {
+        font-size: 18px;
+        color: #878889;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .navbar-right .nav-link:hover {
+        color: #454444;
+    }
+}
+
+/* ----------------------------------------- */
+/* Estilos para telefonos M  (320px - 375px) */
+/* ----------------------------------------- */
+@media (min-width: 320px) {
+
+    /* -------------------- */
+    /* ------ header ------ */
+    /* -------------------- */
+
+
+    .navbar {
+        padding: 10px 30px;
+    }
+
+}
+
+
+/* ---------------------------------------- */
+/* Estilos para telefonos L (375px - 425px) */
+/* ---------------------------------------- */
+@media (min-width: 375px) {
+
+    /* -------------------- */
+    /* ------ header ------ */
+    /* -------------------- */
+
+
+    .navbar {
+        padding: 10px 50px;
+    }
+
+}
+
+
+/* ----------------------------------- */
+/* Estilos para tablet (425px - 768px) */
+/* ----------------------------------- */
+@media (min-width: 425px) {
+
+    /* -------------------- */
+    /* ------ header ------ */
+    /* -------------------- */
+
+
+    .navbar {
+        padding: 10px 12%;
+    }
+
+
+    /* ------ navbar-left ------ */
+
+
+    .logo {
+        height: 32px;
+    }
+
+
+    /* ------ navbar-right ------ */
+
+
+    .icon-image {
+        height: 36px;
+        width: 36px;
+    }
+
+}
+
+
+/* -------------------------------------- */
+/* Estilos para laptop M (768px - 1024px) */
+/* -------------------------------------- */
+@media (min-width: 768px) {
+
+    /* -------------------- */
+    /* ------ header ------ */
+    /* -------------------- */
+
+
+    .navbar {
+        padding: 10px 40px;
+    }
+
+
+    /* ------ navbar-left ------ */
+
+
+    /* ------ navbar-right ------ */
+
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+    }
+    
+    .nav-link {
+        color: #878889;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: normal;
+        transition: transform 0.3s, color 0.3s;
+    }
+    
+    .nav-link:hover {
+        color: #454444;
+        transform: scale(1.1);
+    }
+    
+
+    .menu-icon {
+        display: none;
+    }
+
+    .btn-login {
+        background-color: #fa6800;
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: normal;
+        text-decoration: none;
+        transition: 0.5s;
+    }
+
+    .btn-login:hover {
+        background-color: #e05b00;
+    }
+
+}
+
+
+/* --------------------------------------- */
+/* Estilos para laptop L (1024px - 1440px) */
+/* --------------------------------------- */
+@media (min-width: 1024px) {
+
+    /* -------------------- */
+    /* ------ header ------ */
+    /* -------------------- */
+
+    .navbar {
+        height: 130px;
+        padding: 10px 5%;
+    }
+
+    /* ------ navbar-left ------ */
+
+    .logo {
+        height: 36px;
+    }
+
+    /* ------ navbar-right ------ */
+
+    .nav-links {
+        gap: 32px;
+    }
+
+    .nav-link {
+        font-size: 20px;
+    }
+
+    .btn-login {
+        font-size: 20px;
+    }
+
+
+}
+
+
+/* --------------------------------- */
+/* Estilos para 4K (1440px - 2560px) */
+/* --------------------------------- */
+@media (min-width: 1440px) {}
